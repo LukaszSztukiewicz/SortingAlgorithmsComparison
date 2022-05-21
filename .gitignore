@@ -1,0 +1,14 @@
+.vscode/*
+build/*
+lib/*
+
+#graphs
+*.dot
+
+#images
+*.png
+
+#temp
+*.tmp
+
+!.gitkeep
