@@ -3,7 +3,6 @@
 
 #include <algorithm>
 #include <stdio.h>
-#include <string>
 
 int *bubbleSort(int arr[], int n);
 int *mergeSort(int arr[], int n);
