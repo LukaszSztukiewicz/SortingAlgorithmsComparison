@@ -17,4 +17,38 @@ double measureTimeOfFunction(std::function<int *(int *, int)> f, int arr[], int 
   return cpu_time_used;
 }
 
+class CSV {
+private:
+  std::string filename;
+  std::ofstream file;
+  std::string delimiter;
+
+public:
+  CSV(std::string filename) {
+    this->filename = filename;
+    this->file.open(filename);
+  }
+
+  ~CSV() { this->file.close(); }
+
+  template <typename T>
+  void writeVector(std::vector<T> v) {
+    int sizeMinusOne = v.size() - 1;
+    for (int i = 0; i < sizeMinusOne; i++) {
+      file << v[i] << delimiter;
+    }
+    file << v[sizeMinusOne] << std::endl;
+  }
+
+  template <typename T>
+  void writeWithDelimiter(T t) {
+    file << t << delimiter;
+  }
+
+  template <typename T>
+  void writeRaw(T t) {
+    file << t;
+  }
+};
+
 } // namespace utils
