@@ -188,37 +188,4 @@ int *insertionSort(int arr[], int n) {
   }
   return arr;
 }
-
-// select from sorting algorithms programatically
-int *selectSortingAlgorithm(int arr[], int n, int choice) {
-  switch (choice) {
-  case 1:
-    insertionSort(arr, n);
-    break;
-  case 2:
-    bubbleSort(arr, n);
-    break;
-  case 3:
-    selectionSort(arr, n);
-    break;
-  case 4:
-    mergeSort(arr, n);
-    break;
-  case 5:
-    quickSort(arr, n);
-    break;
-  case 6:
-    heapSort(arr, n);
-    break;
-  case 7:
-    countingSort(arr, n);
-    break;
-  case 8:
-    shellSort(arr, n);
-    break;
-  default:
-    printf("Invalid choice\n");
-  }
-}
-
 } // namespace sorting_algos

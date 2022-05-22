@@ -41,30 +41,4 @@ void generateReversedVShapedArray(int arr[], int n) {
     else
       arr[i / 2] = i;
 }
-
-// select generation function programatically
-void selectGenerationAlgorithm(int arr[], int n, int choice) {
-  switch (choice) {
-  case 1:
-    generateRandomArray(arr, n);
-    break;
-  case 2:
-    generateIncreasingArray(arr, n);
-    break;
-  case 3:
-    generateDecreasingArray(arr, n);
-    break;
-  case 4:
-    generateVShapedArray(arr, n);
-    break;
-  case 5:
-    generateReversedVShapedArray(arr, n);
-    break;
-  case 6:
-    generateConstantArray(arr, n);
-    break;
-  default:
-    printf("Invalid choice\n");
-  }
-}
 } // namespace generators
