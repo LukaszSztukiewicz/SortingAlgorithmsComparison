@@ -2,6 +2,14 @@
 build/*
 lib/*
 
+#cmake
+*.cmake
+*.txt
+Makefile
+CMakeFiles/*
+*/CMakeFiles/*
+!CMakeLists.txt
+
 #graphs
 *.dot
 

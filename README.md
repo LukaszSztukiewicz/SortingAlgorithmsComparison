@@ -8,3 +8,7 @@ Style Guide
 File extensions:
  - .cc for C++ (Linux style)
  - .h for C++ headers
+
+Setup: Linux
+chmod +x ./scripts/bash/cpp-env-setup.sh
+./scripts/bash/cpp-env-setup.sh

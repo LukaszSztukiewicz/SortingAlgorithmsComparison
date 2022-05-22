@@ -68,21 +68,6 @@ void effectivenessComparison(int n, int steps, std::string outputFile,
 } // namespace experiment
 
 int main(int argc, char const *argv[]) {
-
-  // tests();
-  /*
- void tests(){
-  int n=21;
-   for(int i = 1; i<=6; i++){
-     int arr[n];
-     for(int j = 1; j<=8; j++){
-         selectGenerationAlgorithm(arr, n, i);
-        selectSortingAlgorithm(arr,n,j);
-        printf("G:%d S:%d is ", i,j); printArray(arr, n);
-     }
-   }
- }*/
-
   // first exercise
   int n     = 100000;
   int steps = 20;
