@@ -13,5 +13,3 @@ add_executable(${OUTPUT_PROGRAM}_run  ${HEADERS} ${SOURCES})
 add_library(${OUTPUT_PROGRAM}_lib STATIC  ${HEADERS} ${SOURCES})
 
 enable_testing()
-
-set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -Wl,--stack,1000000000")

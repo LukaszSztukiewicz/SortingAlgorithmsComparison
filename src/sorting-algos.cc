@@ -67,28 +67,31 @@ int *mergeSortFunction(int arr[], int l, int r) {
 int *mergeSort(int arr[], int n) {
   return mergeSortFunction(arr, 0, n - 1);
 }
-
 int *quickSortFunction(int arr[], int l, int r) {
   if (l < r) {
-    int x = arr[r];
+    int x = arr[(l + r) / 2];
     int i = l - 1;
-    for (int j = l; j <= r - 1; j++) {
-      if (arr[j] <= x) {
+    int j = r + 1;
+    while (true) {
+      do {
         i++;
-        std::swap(arr[j], arr[i]);
+      } while (arr[i] < x);
+      do {
+        j--;
+      } while (arr[j] > x);
+      if (i >= j) {
+        break;
       }
+      std::swap(arr[i], arr[j]);
     }
-    std::swap(arr[r], arr[i + 1]);
-    quickSortFunction(arr, l, i);
-    quickSortFunction(arr, i + 2, r);
+    quickSortFunction(arr, l, j);
+    quickSortFunction(arr, j + 1, r);
   }
   return arr;
 }
-
 int *quickSort(int arr[], int n) {
   return quickSortFunction(arr, 0, n - 1);
 }
-
 int *selectionSort(int arr[], int n) {
   int i, j, min_idx;
   for (i = 0; i < n - 1; i++) {
@@ -100,18 +103,17 @@ int *selectionSort(int arr[], int n) {
   }
   return arr;
 }
-
+// counting sort using heap memory
 int *countingSort(int arr[], int n) {
-  int output[n];
+  int *output = new int[n];
   int i;
   int max = arr[0];
   for (int i = 1; i < n; i++) {
     if (arr[i] > max) {
       max = arr[i];
-      printf("i:%d max: %d\n", i, max);
     }
   }
-  int count[max + 1];
+  int *count = new int[max + 1];
   for (i = 0; i <= max; i++)
     count[i] = 0;
 
@@ -125,10 +127,11 @@ int *countingSort(int arr[], int n) {
     output[count[arr[i]] - 1] = arr[i];
     count[arr[i]]--;
   }
-
   for (i = 0; i < n; i++)
     arr[i] = output[i];
 
+  delete[] output;
+  delete[] count;
   return arr;
 }
 
