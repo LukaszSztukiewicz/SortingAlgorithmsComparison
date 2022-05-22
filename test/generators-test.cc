@@ -1,4 +1,4 @@
-#include "generators.cc"
+#include "generators.h"
 #include "gtest/gtest.h"
 
 // create test for generateVShapedArray

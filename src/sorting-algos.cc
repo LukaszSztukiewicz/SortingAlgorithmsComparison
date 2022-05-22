@@ -103,11 +103,14 @@ int *selectionSort(int arr[], int n) {
 
 int *countingSort(int arr[], int n) {
   int output[n];
-  int i, max = arr[0];
-  for (i = 1; i < n; i++)
-    if (arr[i] > max)
+  int i;
+  int max = arr[0];
+  for (int i = 1; i < n; i++) {
+    if (arr[i] > max) {
       max = arr[i];
-
+      printf("i:%d max: %d\n", i, max);
+    }
+  }
   int count[max + 1];
   for (i = 0; i <= max; i++)
     count[i] = 0;
@@ -173,6 +176,7 @@ int *heapSort(int arr[], int n) {
     std::swap(arr[0], arr[i]);
     heapify(arr, i, 0);
   }
+  return arr;
 }
 
 int *insertionSort(int arr[], int n) {

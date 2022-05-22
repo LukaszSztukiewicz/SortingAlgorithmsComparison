@@ -1,6 +1,8 @@
 .vscode/*
-build/*
 lib/*
+
+#cmake tool vscode extension
+build/*
 
 #cmake
 *.cmake
@@ -9,6 +11,7 @@ Makefile
 CMakeFiles/*
 */CMakeFiles/*
 !CMakeLists.txt
+*.a
 
 #graphs
 *.dot

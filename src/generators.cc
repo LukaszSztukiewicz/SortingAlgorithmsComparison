@@ -5,7 +5,7 @@ namespace generators {
 // array of uniformly distributied values
 void generateRandomArray(int arr[], int n) {
   for (int i = 0; i < n; i++)
-    arr[i] = rand() % n;
+    arr[i] = rand() % 10000;
 }
 // generate array with increasing values
 void generateIncreasingArray(int arr[], int n) {

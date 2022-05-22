@@ -14,3 +14,4 @@ add_subdirectory(lib/googletest)
 #our subdirectories (goes into subdirectory and searches for CMakeLists.txt there)
 add_subdirectory(src)
 add_subdirectory(test)
+
